@@ -32,13 +32,13 @@ def load_jsonl(path):
         # Create the AmazonProductReviews instance
         review = AmazonProductReviews(label=label, reviewText=review_text)
         reviews.append(review)
-        if idx %1000 == 0: print(idx)
+        if idx %10 == 0: print(idx)
 
     # Bulk create the reviews
     AmazonProductReviews.objects.bulk_create(reviews)
 
 # Path to the JSONL file
-jsonl_path = 'utils/data/data_2k.jsonl'
+jsonl_path = 'utils/data/data_10.jsonl'
 
 # Load the JSONL data
 load_jsonl(jsonl_path)
