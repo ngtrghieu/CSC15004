@@ -18,3 +18,4 @@ class IndexView(generic.TemplateView):
 
 class BaseView(generic.TemplateView):
     template_name = "final_lab/base.html"
+

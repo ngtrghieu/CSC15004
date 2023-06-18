@@ -441,6 +441,7 @@
     document.addEventListener("DOMContentLoaded", function () {
       var clickLinks = document.querySelectorAll(".clickLink");
       var categoryTitle = document.getElementById("categoryTitle");
+      var inputElement = document.getElementById("inputElement");
 
       clickLinks.forEach(function (clickLink) {
         clickLink.addEventListener("click", function (event) {
@@ -452,10 +453,13 @@
           // Get the text content of the clicked <a> tag
           var contentAfterSvg = clickLink.childNodes[2].nodeValue.trim();
 
+          var inputElement = clickLink.querySelector('input[name="input"]');
+
           // Replace the text content inside the <h3> tag
           categoryTitle.innerHTML = "";
           categoryTitle.appendChild(svgElement.cloneNode(true));
           categoryTitle.insertAdjacentText("beforeend", contentAfterSvg);
+          categoryTitle.appendChild(inputElement);
         });
       });
     });
