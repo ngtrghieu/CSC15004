@@ -85,8 +85,7 @@
       </a>
       <a href="#" class="clickLink">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" id="cell">
-          <path
-            fill="currentColor"
+          <path fill="currentColor"
             d="M12.5 0C5.602 0 0 5.602 0 12.5S5.602 25 12.5 25 25 19.398 25 12.5 19.398 0 12.5 0zm0 .969A11.519 11.519 0 0 1 24.031 12.5c0 6.378-5.153 11.563-11.531 11.563C6.122 24.063.937 18.878.937 12.5.938 6.122 6.122.969 12.5.969zM11.406 7 9.25 8.25a2.492 2.492 0 0 0-.906 3.406l2.5 4.344a2.488 2.488 0 0 0 3.406.906l2.156-1.25-1.5-2.594-1.281.75c-.308.176-.361.106-.469.032-.107-.074-.187-.188-.187-.188L11.438 11s-.081-.142-.094-.281c-.014-.14-.055-.193.219-.344h.03l1.313-.781-.75-1.281L11.406 7zm3.313.031-.25.969a3.483 3.483 0 0 1 2.469 4.281l.968.25a4.466 4.466 0 0 0-.437-3.406 4.521 4.521 0 0 0-2.75-2.094zm-3.656 1.344.25.438.25.437-.47.25c-.573.32-.788.905-.75 1.313.04.408.25.718.25.718l1.5 2.594s.159.296.5.531a1.45 1.45 0 0 0 1.532.031l.438-.25.5.876-1.313.75a1.505 1.505 0 0 1-2.063-.563l-2.5-4.344c-.42-.727-.164-1.611.563-2.031l1.313-.75zm3.156.594-.281.969c.805.215 1.278 1.006 1.062 1.812l.969.281a2.519 2.519 0 0 0-.25-1.906 2.447 2.447 0 0 0-1.5-1.156z">
           </path>
         </svg>
@@ -373,6 +372,7 @@
   </div>
   <div class="content-wrapper">
     <div class="content-wrapper-header">
+      {% block generate_preview %}
       <div class="content-wrapper-context">
         <h3 class="img-content" id="categoryTitle">
           <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -401,14 +401,13 @@
           </svg>
           Categories
         </h3>
+
         <div class="content-text">
-          Grab yourself 10 free images from Adobe Stock in a 30-day free trial plan andGrab yourself 10 free images from Adobe Stock in a 30-day free trial plan andGrab yourself 10 free images from Adobe Stock in a 30-day free trial plan andGrab yourself 10 free imagey free trial plan andGrab yourself 10 free images from Adobe Stock in a 30-day free trial plan andGrab yourself 10 free images from Adobe Stock in a 30-day free trial plan free trial plan andGrab yourself 10 free images from Adobe Stock in a 30-day free trial plan andGrab yourself 10 free images from Adobe Stock in a 30-day free trial plan andGrab yourself 10 free images from Adobe Stock in a 30-day free trial plan and
-          find perfect image, that will help you with your new project.</div>
+          Grab yourself 10 free imagesill help you with your new project.</div>
         <!-- <button class="content-button">Generate comment</button> -->
         <button id="generateCommentButton" class="content-button">Generate comment</button>
-        <button id="copyCommentButton" class="content-button">Copy comment</button>
-
       </div>
+      {% endblock %}
       <img class="content-wrapper-img" src="{% static 'final_lab/images/image0.png' %}" alt="">
     </div>
     <div class="content-section">
@@ -464,40 +463,40 @@
             Test
           </span>
           <div class="button-wrapper">
-                  <button class="content-button status-button">Update this app</button>
-                  <div class="pop-up">
-                    <div class="pop-up__title">Update This App
-                      <svg class="close" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle">
-                        <circle cx="12" cy="12" r="10" />
-                        <path d="M15 9l-6 6M9 9l6 6" />
-                      </svg>
-                    </div>
-                    <div class="pop-up__subtitle">Adjust your selections for advanced options as desired before
-                      continuing. <a href="#">Learn more</a></div>
-                    <div class="checkbox-wrapper">
-                      <input type="checkbox" id="check1" class="checkbox">
-                      <label for="check1">Import previous settings and preferences</label>
-                    </div>
-                    <div class="checkbox-wrapper">
-                      <input type="checkbox" id="check2" class="checkbox">
-                      <label for="check2">Remove old versions</label>
-                    </div>
-                    <div class="content-button-wrapper">
-                      <button class="content-button status-button open close">Cancel</button>
-                      <button class="content-button status-button">Continue</button>
-                    </div>
-                  </div>
-                  <div class="menu">
-                    <button class="dropdown">
-                      <ul>
-                        <li><a href="#">Go to Discover</a></li>
-                        <li><a href="#">Learn more</a></li>
-                        <li><a href="#">Uninstall</a></li>
-                      </ul>
-                    </button>
-                  </div>
-                </div>
+            <button class="content-button status-button">Update this app</button>
+            <div class="pop-up">
+              <div class="pop-up__title">Update This App
+                <svg class="close" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round" class="feather feather-x-circle">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M15 9l-6 6M9 9l6 6" />
+                </svg>
+              </div>
+              <div class="pop-up__subtitle">Adjust your selections for advanced options as desired before
+                continuing. <a href="#">Learn more</a></div>
+              <div class="checkbox-wrapper">
+                <input type="checkbox" id="check1" class="checkbox">
+                <label for="check1">Import previous settings and preferences</label>
+              </div>
+              <div class="checkbox-wrapper">
+                <input type="checkbox" id="check2" class="checkbox">
+                <label for="check2">Remove old versions</label>
+              </div>
+              <div class="content-button-wrapper">
+                <button class="content-button status-button open close">Cancel</button>
+                <button class="content-button status-button">Continue</button>
+              </div>
+            </div>
+            <div class="menu">
+              <button class="dropdown">
+                <ul>
+                  <li><a href="#">Go to Discover</a></li>
+                  <li><a href="#">Learn more</a></li>
+                  <li><a href="#">Uninstall</a></li>
+                </ul>
+              </button>
+            </div>
+          </div>
         </li>
         <li class="adobe-product">
           <div class="products">
@@ -537,4 +536,26 @@
     </div>
   </div>
 </div>
+{% endblock %}
+
+
+{% block scripts %}
+<script>
+  // Get the <h3> category element and button generate by its id
+  const h3Element = document.getElementById('categoryTitle');
+  const button_gen = document.getElementById('generateCommentButton')
+
+  button_gen.addEventListener('click', () => {
+    // Get the current path
+    const currentPath = 'index';
+    // Get the content after the <svg> tag
+    const svgElement = h3Element.querySelector('svg');
+    const contentAfterSvg = svgElement.nextSibling.textContent.trim();
+    // Update the path by appending the contentAfterSvg
+    const newPath = currentPath + '/' + contentAfterSvg;
+
+    // Change the window location to the new path
+    window.location.href = newPath;
+  });
+</script>
 {% endblock %}
