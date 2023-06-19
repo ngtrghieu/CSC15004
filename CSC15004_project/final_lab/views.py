@@ -1,5 +1,6 @@
 from django.shortcuts import render
 import random
+from utils.predict import get_predict
 
 # Create your views here.
 
@@ -33,7 +34,10 @@ def index_view(request, category):
         else:
             rnd_txt = None
 
-    return render(request, 'final_lab/category.html', {'category': category, 'label_cat': label, 'reviewText': rnd_txt})
+    response=""
+    if request.method=='POST':
+        input=request.POST.get('input')
+        print(input)
+        response=get_predict(input)
 
-def predict(request):
-    return render(request, 'final_lab/predict.html')
+    return render(request, 'final_lab/category.html', {'category': category, 'label_cat': label, 'reviewText': rnd_txt, 'response':response})
