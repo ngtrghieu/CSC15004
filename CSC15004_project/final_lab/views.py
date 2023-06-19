@@ -20,13 +20,6 @@ class IndexView(generic.TemplateView):
 class BaseView(generic.TemplateView):
     template_name = "final_lab/base.html"
 
-# def cat_view(request):
-#     return render(request, 'final_lab/cat.html')
-
-# def index_view(request, category):
-#     label = ?
-#     return render(request, 'final_lab/category.html', {'category': category, 'label': label})
-
 def index_view(request, category):
     try:
         label = AmazonLabels.objects.get(cat_name=category)
@@ -41,3 +34,6 @@ def index_view(request, category):
             rnd_txt = None
 
     return render(request, 'final_lab/category.html', {'category': category, 'label_cat': label, 'reviewText': rnd_txt})
+
+def predict(request):
+    return render(request, 'final_lab/predict.html')

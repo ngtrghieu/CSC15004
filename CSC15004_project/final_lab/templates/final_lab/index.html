@@ -437,6 +437,7 @@
     <div class="content-section">
       <div class="content-section-title">Use Model</div>
       <div class="apps-card">
+        {% block predict %}
         <div class="app-card">
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" id="forecasting">
@@ -448,13 +449,18 @@
               </path>
             </svg>
             Prediction
+            
           </span>
-          <div class="app-card__subtext">Edit, master and create fully proffesional videos</div>
+          <!-- <div class="app-card__subtext">Edit, master and create fully proffesional videos</div> -->
+          <div class="search-bar">
+            <input type="text" placeholder="Input review Text">
+          </div>
           <div class="app-card-buttons">
             <button class="content-button status-button">predict_default</button>
           </div>
 
         </div>
+        {% endblock %}
         <div class="app-card">
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" id="twin">

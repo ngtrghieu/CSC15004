@@ -21,13 +21,13 @@ $(function () {
   });
  });
  
- $(".search-bar input")
-  .focus(function () {
-   $(".header").addClass("wide");
-  })
-  .blur(function () {
-   $(".header").removeClass("wide");
-  });
+//  $(".search-bar input")
+//   .focus(function () {
+//    $(".header").addClass("wide");
+//   })
+//   .blur(function () {
+//    $(".header").removeClass("wide");
+//   });
  
  $(document).click(function (e) {
   var container = $(".status-button");
