@@ -597,6 +597,7 @@ body.light-mode .video-bg:before {
   font-size: 15px;
   position: relative;
 }
+
 @media screen and (max-width: 700px) {
   .status {
     display: none;
@@ -916,4 +917,10 @@ body.light-mode .video-bg:before {
   padding: 26px;
   overflow: auto;
   flex-shrink: 0;
+}
+
+.status-button-predict {
+  font-size: 15px;
+  margin-top: 0;
+  padding: 6px 24px;
 }
