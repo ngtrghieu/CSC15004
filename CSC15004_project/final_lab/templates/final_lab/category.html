@@ -52,7 +52,7 @@ button_gen.addEventListener('click', () => {
   const contentAfterSvg = svgElement.nextSibling.textContent.trim();
   console.log(contentAfterSvg)
   // Update the path by appending contentAfterSvg
-  const newPath = "http://synguyencd.pythonanywhere.com/final_lab/index" + '/' + contentAfterSvg;
+  const newPath = "http://127.0.0.1:8000/final_lab/index" + '/' + contentAfterSvg;
 
   // Change the window location to the new path
   window.location.href = newPath;
