@@ -456,10 +456,10 @@
           <form method="POST" action="">
             {% csrf_token %}
             <div class="search-bar">
-              <input name="input" type="text" placeholder="Input review Text">
+              <input name="input" type="text" placeholder="Input review Text" value="{{ reviewText }}">
             </div>
             <div class="app-card-buttons">
-              <button type="submit" class="content-button status-button">predict_default</button>
+              <button type="submit" class="content-button status-button">predict</button>
             </div>
           </form>
           <div><h3>{{response}}</h3></div>
