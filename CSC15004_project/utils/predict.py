@@ -68,7 +68,7 @@ num_labels = len(label_dict)
 #         return len(self.all_data)
     
 
-model_name = "nthieu/bert-amazon-product-classification-small-data-epoch-1"
+model_name = "nthieu/amazon-product-classifier-epoch-2"
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 bert = AutoModelForSequenceClassification.from_pretrained(model_name, num_labels=num_labels)
 
